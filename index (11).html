@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kariwala — Business, Consciously Conducted</title>
+<meta name="description" content="Kariwala Industries — Business, Consciously Conducted. Guided by Dharma, we strive to spread happiness through business with principles, people and purpose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;color:#2a2a2a;background:#FAFAF7;line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:root{
+  --ivory:#FAFAF7;--warm:#F5F3EE;--cream:#EDE9E0;
+  --gd:#1B4332;--g:#2D6A4F;--gl:#52B788;--gm:#95D5B2;
+  --t:#2a2a2a;--tl:#666;--tm:#999;
+  --c1:#C0392B;--c2:#E67E22;--c3:#F1C40F;--c4:#27AE60;--c5:#2980B9;--c6:#6C3483;--c7:#8E44AD;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',sans-serif;
+  --hand:'Caveat',cursive;
+  --mw:1200px;
+}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,250,247,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.06);transition:box-shadow .3s}
+.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
+.ni{max-width:var(--mw);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px}
+.nl{display:flex;align-items:center;gap:12px}
+.nl svg{width:42px;height:42px}
+.nlt{display:flex;flex-direction:column}
+.nln{font-size:1.1rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gd)}
+.nls{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-top:1px}
+.nk{display:flex;align-items:center;gap:28px}
+.nk a{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tl);font-weight:500;transition:color .2s}
+.nk a:hover{color:var(--g)}
+.nc{background:var(--g);color:#fff!important;padding:10px 22px;border-radius:4px;font-weight:600;transition:background .2s}
+.nc:hover{background:var(--gd)}
+.ham{display:none;cursor:pointer;background:none;border:none;padding:8px}
+.ham span{display:block;width:22px;height:2px;background:var(--gd);margin:5px 0}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;padding-top:72px;position:relative;background:var(--ivory);overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:0;left:0;width:400px;height:400px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none'%3E%3Cpath d='M50 380c30-60 80-120 150-160s120-50 180-80' stroke='%2395D5B2' stroke-width='0.8' opacity='0.3'/%3E%3Cpath d='M20 350c40-50 100-100 170-130s110-40 160-60' stroke='%2395D5B2' stroke-width='0.5' opacity='0.2'/%3E%3Cpath d='M80 400c20-80 60-140 120-180s130-60 180-100' stroke='%2395D5B2' stroke-width='0.6' opacity='0.25'/%3E%3Cellipse cx='200' cy='300' rx='80' ry='120' stroke='%2395D5B2' stroke-width='0.4' opacity='0.15'/%3E%3Cpath d='M150 380c10-40 30-80 70-110s80-40 120-70' stroke='%2352B788' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E") no-repeat;opacity:.6;pointer-events:none}
+.hi{max-width:var(--mw);margin:0 auto;padding:60px 24px 20px;display:grid;grid-template-columns:1fr 260px 1fr;gap:32px;align-items:center;flex:1}
+.hl h1{font-family:var(--serif);font-size:clamp(1.7rem,3.2vw,2.6rem);font-weight:300;color:var(--t);line-height:1.3;margin-bottom:20px}
+.hl h1 em{font-style:italic;color:var(--gd)}
+.hdiv{width:40px;height:2px;background:var(--gm);margin-bottom:20px}
+.hm{font-size:.92rem;color:var(--t);line-height:1.7;margin-bottom:20px}
+.hm strong{font-weight:600;display:block;margin-top:3px}
+.hsn{font-family:var(--hand);font-size:2rem;color:var(--gd)}
+.hst{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);font-weight:600;margin-bottom:16px}
+.hvl{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1px solid var(--cream);border-radius:8px;margin-top:8px;cursor:pointer;transition:border-color .2s}
+.hvl:hover{border-color:var(--gm)}
+.hpi{width:36px;height:36px;border-radius:50%;background:var(--g);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hpi svg{width:14px;height:14px;fill:#fff;margin-left:2px}
+.hvt span{display:block}.hvt span:first-child{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}.hvt span:last-child{font-size:.72rem;color:var(--tm)}
+
+/* SPINE */
+.spine{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0}
+.spine::before{content:'';position:absolute;top:30px;bottom:30px;left:50%;width:2px;background:linear-gradient(to top,var(--c1),var(--c2),var(--c3),var(--c4),var(--c5),var(--c6),var(--c7));transform:translateX(-50%);opacity:.35}
+.si{display:flex;align-items:center;gap:14px;position:relative;z-index:1;padding:10px 0;cursor:pointer;transition:transform .2s;text-decoration:none}
+.si:hover{transform:scale(1.06)}
+.sic{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.12);transition:box-shadow .3s}
+.si:hover .sic{box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.sic svg{width:22px;height:22px}
+.sl .sn{font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--tm)}
+.sl .sna{font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--t)}
+.sl .sw{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+
+/* HERO RIGHT */
+.hr{position:relative;border-radius:10px;overflow:hidden;height:520px}
+.hr img{width:100%;height:100%;object-fit:cover}
+.hro{position:absolute;bottom:16px;right:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);padding:14px 18px;border-radius:6px;max-width:260px}
+.hro h4{font-family:var(--serif);font-size:.95rem;color:var(--gd);margin-bottom:3px}
+.hro p{font-size:.78rem;color:var(--tl);line-height:1.5}
+
+/* SCROLL */
+.sci{text-align:center;padding:20px 0 12px;animation:fl 2s ease-in-out infinite}
+.sci p{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--tm);margin-bottom:6px}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+
+/* STATS */
+.sb{background:var(--warm);border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
+.sbi{max-width:var(--mw);margin:0 auto;padding:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.sti{text-align:center;flex:1;min-width:120px}
+.sti .num{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--gd)}
+.sti .lab{font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--tm);font-weight:600}
+.sti .sub{font-size:.7rem;color:var(--tl)}
+
+/* SECTIONS */
+.sec{padding:100px 0}
+.con{max-width:var(--mw);margin:0 auto;padding:0 24px}
+.ey{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--g);margin-bottom:14px}
+h2.dl{font-family:var(--serif);font-size:clamp(1.7rem,3.5vw,2.8rem);font-weight:300;line-height:1.2;color:var(--gd)}
+h2.dm{font-family:var(--serif);font-size:clamp(1.3rem,2.5vw,2rem);font-weight:400;color:var(--gd)}
+
+/* JOURNEY */
+.jour{background:#fff}
+.ji{max-width:700px;margin:0 auto;text-align:center}
+.jp{width:180px;height:180px;border-radius:50%;margin:0 auto 28px;overflow:hidden;border:3px solid var(--warm)}
+.jp img{width:100%;height:100%;object-fit:cover}
+.jq{font-family:var(--serif);font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:300;font-style:italic;color:var(--gd);line-height:1.5;margin-bottom:28px;padding:0 16px}
+.jt{font-size:.95rem;color:var(--tl);line-height:1.9;margin-bottom:20px;text-align:left}
+.js{font-family:var(--hand);font-size:1.8rem;color:var(--gd);margin-top:28px}
+
+/* PHILOSOPHY */
+.phil{background:var(--ivory)}
+.pt{max-width:620px;margin:0 auto 50px;text-align:center}
+.pt p{color:var(--tl);line-height:1.8;margin-top:16px}
+.pc{background:#fff;border-radius:8px;padding:36px;max-width:620px;margin:0 auto;text-align:center;border:1px solid rgba(0,0,0,.04)}
+.pc blockquote{font-family:var(--serif);font-size:1.3rem;font-style:italic;color:var(--gd);margin-bottom:12px}
+.pc p{font-size:.9rem;color:var(--tl);line-height:1.7}
+.pf{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:50px;flex-wrap:wrap}
+.pfi{text-align:center;padding:12px 20px}
+.pfi h4{font-family:var(--serif);font-size:1.05rem;color:var(--gd)}
+.pfi p{font-size:.7rem;color:var(--tm);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
+.pfa{font-size:1.1rem;color:var(--gm)}
+
+/* 7 CHAKRAS */
+.sc7{background:#fff}
+.sc7h{text-align:center;max-width:680px;margin:0 auto 70px}
+.sc7h p{color:var(--tl);font-size:.95rem;line-height:1.8;margin-top:16px}
+.cg{display:flex;flex-direction:column;max-width:700px;margin:0 auto}
+.cg::before{display:none}
+.cc{display:grid;grid-template-columns:80px 1fr 200px;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.04);cursor:pointer;transition:background .2s;text-decoration:none}
+.cc:hover{background:rgba(45,106,79,.03);border-radius:8px}
+.cc:last-child{border-bottom:none}
+.cd{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 12px rgba(0,0,0,.1);transition:transform .3s}
+.cc:hover .cd{transform:scale(1.08)}
+.cd svg{width:28px;height:28px}
+.ci .cn{font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--tm)}
+.ci h3{font-size:.95rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin:2px 0 3px}
+.ci .cdim{font-size:.82rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.ci .ctag{font-family:var(--serif);font-size:.92rem;font-style:italic;color:var(--tl);margin-top:4px}
+.cimg{width:200px;height:120px;border-radius:6px;overflow:hidden}
+.cimg img{width:100%;height:100%;object-fit:cover}
+
+/* CHAKRA DETAIL */
+.chd{padding:80px 0;position:relative}
+.chd:nth-child(even){background:var(--warm)}
+.chdh{max-width:680px;margin:0 auto 50px;text-align:center}
+.chb{width:80px;height:80px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.chb svg{width:32px;height:32px}
+.chdh .cn{font-size:.68rem;font-weight:700;letter-spacing:.15em;color:var(--tm);margin-bottom:6px}
+.chdh .ctag{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.4rem);font-style:italic;color:var(--tl);margin-top:12px;line-height:1.5}
+.chdh .cvq{font-family:var(--serif);font-size:1.2rem;color:var(--gd);margin-top:12px}
+.gl{text-align:center;margin-bottom:28px}
+.gl p{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--g)}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:900px;margin:0 auto 36px}
+.pg.sm{grid-template-columns:repeat(2,1fr);max-width:480px}
+.pt2{aspect-ratio:4/3;border-radius:6px;overflow:hidden;position:relative;cursor:pointer;transition:transform .3s,box-shadow .3s}
+.pt2:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.pt2 img{width:100%;height:100%;object-fit:cover}
+.pt2 .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;padding:20px 10px 10px;font-size:.7rem;opacity:0;transition:opacity .3s}
+.pt2:hover .cap{opacity:1}
+.cap .cy{font-weight:600;display:block;margin-bottom:2px}
+.ps{max-width:560px;margin:36px auto 0;text-align:center}
+.ps h4{font-size:.72rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--g);margin-bottom:16px}
+.ps p{font-family:var(--serif);font-size:1rem;color:var(--tl);font-style:italic;line-height:1.7;margin-bottom:10px}
+.nc2{text-align:center;margin-top:40px}
+.nc2 a{font-size:.78rem;font-weight:600;color:var(--g);text-transform:uppercase;letter-spacing:.1em;display:inline-flex;align-items:center;gap:8px;transition:gap .2s}
+.nc2 a:hover{gap:14px}
+.gsl{text-align:center;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin:28px 0 14px}
+
+/* 8 LIMBS */
+.el{background:var(--gd);color:#fff;padding:100px 0;position:relative;overflow:hidden}
+.el::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(82,183,136,.1),transparent 70%)}
+.elh{text-align:center;max-width:680px;margin:0 auto 50px;position:relative}
+.elh .ey{color:var(--gm)}
+.elh h2{color:#fff}
+.elc{text-align:center;max-width:580px;margin:0 auto 50px}
+.elc p{font-family:var(--serif);font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.6}
+.elc p strong{color:#fff;font-weight:400}
+.lp{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0;max-width:1000px;margin:0 auto;position:relative}
+.li{text-align:center;padding:16px 12px;flex:1;min-width:90px;cursor:pointer;transition:all .3s;border-radius:8px}
+.li:hover,.li.act{background:rgba(255,255,255,.08);transform:translateY(-3px)}
+.li .ln{font-size:.58rem;font-weight:700;letter-spacing:.1em;color:var(--gm);margin-bottom:6px}
+.li .lna{font-family:var(--serif);font-size:.92rem;color:#fff;margin-bottom:3px}
+.li .lm{font-size:.65rem;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.06em}
+.lco{width:30px;height:2px;background:rgba(255,255,255,.12);flex-shrink:0}
+.ld{margin-top:36px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:36px;max-width:680px;margin-left:auto;margin-right:auto;display:none}
+.ld.act{display:block}
+.ld h3{font-family:var(--serif);font-size:1.4rem;color:#fff;margin-bottom:10px}
+.ld p{color:rgba(255,255,255,.65);line-height:1.8}
+
+/* SAMADHI */
+.sam{background:var(--ivory);text-align:center}
+.sami{max-width:600px;margin:0 auto}
+.samico{width:90px;height:90px;border-radius:50%;background:linear-gradient(135deg,var(--gl),var(--g));margin:0 auto 28px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(45,106,79,.2)}
+.samico svg{width:36px;height:36px;fill:#fff}
+.samtag{font-family:var(--serif);font-size:clamp(1.1rem,2vw,1.5rem);font-style:italic;color:var(--tl);line-height:1.6;margin:16px 0 28px}
+.sami p{color:var(--tl);line-height:1.9;margin-bottom:16px}
+
+/* OUR BUSINESS */
+.ob{background:#fff}
+.obh{text-align:center;max-width:620px;margin:0 auto 50px}
+.obh p{color:var(--tl);line-height:1.8;margin-top:14px}
+.bg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto}
+.bc{border-radius:8px;overflow:hidden;transition:transform .3s,box-shadow .3s;border:1px solid rgba(0,0,0,.04)}
+.bc:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.bci{height:200px;overflow:hidden}
+.bci img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.bc:hover .bci img{transform:scale(1.05)}
+.bct{padding:24px;text-align:center}
+.bct h3{font-family:var(--serif);font-size:1.15rem;margin-bottom:8px;color:var(--gd)}
+.bct p{font-size:.82rem;color:var(--tl);line-height:1.6}
+
+/* OUR PEOPLE */
+.op{background:var(--ivory)}
+.oph{text-align:center;max-width:620px;margin:0 auto 50px}
+.oph p{color:var(--tl);line-height:1.8;margin-top:14px}
+.opg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:900px;margin:0 auto}
+.opt{aspect-ratio:1;border-radius:8px;overflow:hidden;transition:transform .3s}
+.opt:hover{transform:scale(1.03)}
+.opt img{width:100%;height:100%;object-fit:cover}
+
+/* CTA */
+.wwu{background:var(--gd);color:#fff;text-align:center;padding:80px 0}
+.wwu h2{color:#fff;margin-bottom:16px}
+.wwu p{color:rgba(255,255,255,.7);max-width:480px;margin:0 auto 36px;line-height:1.8}
+.wwub{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wwub a{padding:13px 28px;border-radius:4px;font-size:.82rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:all .2s}
+.bp{background:#fff;color:var(--gd)}.bp:hover{background:var(--gm)}
+.bs{border:1px solid rgba(255,255,255,.3);color:#fff}.bs:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+/* CONTACT */
+.ct{background:var(--ivory);text-align:center}
+.cti{max-width:560px;margin:0 auto}
+.cti p{color:var(--tl);margin-bottom:28px;line-height:1.8}
+
+/* FOOTER */
+.ft{background:var(--gd);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.06);padding:50px 0 28px}
+.fti{max-width:var(--mw);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+.ftb{max-width:280px}
+.ftb .nln{color:#fff;margin-bottom:6px}
+.ftb p{font-size:.82rem;line-height:1.7;margin-top:10px}
+.ftc h4{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px}
+.ftc a{display:block;font-size:.82rem;margin-bottom:8px;transition:color .2s}
+.ftc a:hover{color:#fff}
+.ftbt{max-width:var(--mw);margin:36px auto 0;padding:16px 24px 0;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;font-size:.72rem;color:rgba(255,255,255,.35)}
+
+/* ANIMATIONS */
+.fi{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.fi.v{opacity:1;transform:none}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;display:none;align-items:center;justify-content:center;cursor:pointer}
+.lb.show{display:flex}
+.lb img{max-width:90vw;max-height:85vh;border-radius:8px;object-fit:contain}
+.lb .lbc{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.8);font-size:.85rem;text-align:center}
+.lbx{position:absolute;top:24px;right:32px;color:#fff;font-size:2rem;cursor:pointer;background:none;border:none;z-index:201}
+
+/* MOBILE */
+@media(max-width:900px){
+  .hi{grid-template-columns:1fr;gap:20px}
+  .spine{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px;padding:16px 0}
+  .spine::before{display:none}
+  .sl{display:none}
+  .sic{width:40px;height:40px}
+  .sic svg{width:18px;height:18px}
+  .hr{height:300px;border-radius:8px}
+  .nk{display:none}
+  .ham{display:block}
+  .pg{grid-template-columns:repeat(2,1fr)}
+  .bg{grid-template-columns:1fr}
+  .opg{grid-template-columns:repeat(2,1fr)}
+  .fti{grid-template-columns:1fr 1fr}
+  .ftbt{flex-direction:column;gap:6px;text-align:center}
+  .lp{flex-direction:column;gap:0}
+  .lco{width:2px;height:16px}
+  .cc{grid-template-columns:60px 1fr;gap:12px}
+  .cimg{display:none}
+  .sbi{justify-content:center}
+}
+@media(max-width:600px){
+  .sec{padding:70px 0}
+  .fti{grid-template-columns:1fr}
+  .wwub{flex-direction:column;align-items:center}
+}
+
+/* MOBILE MENU */
+.mm{position:fixed;inset:0;background:rgba(250,250,247,.98);z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mm.open{opacity:1;pointer-events:all}
+.mm a{font-size:1.05rem;font-weight:500;color:var(--gd);letter-spacing:.04em}
+.mmx{position:absolute;top:18px;right:18px;background:none;border:none;font-size:2rem;color:var(--gd);cursor:pointer}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+<div class="ni">
+  <a href="#" class="nl">
+    <svg viewBox="0 0 42 42" fill="none"><circle cx="21" cy="21" r="20" stroke="#2D6A4F" stroke-width="1.5"/><path d="M21 6c-4 6-8 10-8 15a8 8 0 0016 0c0-5-4-9-8-15z" fill="none" stroke="#2D6A4F" stroke-width="1.2"/><circle cx="21" cy="22" r="3" fill="#2D6A4F" opacity=".3"/><path d="M15 10c2 1 4 1 6 0M15 34c2-1 4-1 6 0" stroke="#2D6A4F" stroke-width=".8" fill="none" opacity=".4"/></svg>
+    <div class="nlt"><span class="nln">Kariwala</span><span class="nls">Business, Consciously Conducted</span></div>
+  </a>
+  <div class="nk">
+    <a href="#journey">The Journey</a>
+    <a href="#seven-chakras">7 Chakras</a>
+    <a href="#eight-limbs">8 Limbs</a>
+    <a href="#our-business">Our Business</a>
+    <a href="#contact">Contact</a>
+    <a href="#wwu" class="nc">Work With Us</a>
+  </div>
+  <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mm" id="mm"><button class="mmx" id="mmx">&times;</button>
+<a href="#journey" onclick="cmm()">The Journey</a><a href="#seven-chakras" onclick="cmm()">7 Chakras</a><a href="#eight-limbs" onclick="cmm()">8 Limbs</a><a href="#our-business" onclick="cmm()">Our Business</a><a href="#contact" onclick="cmm()">Contact</a><a href="#wwu" onclick="cmm()">Work With Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hi">
+  <div class="hl fi">
+    <h1>What if a business could be run like a human being lives&mdash;<br><em>with stability, creativity, courage, compassion, truth, vision and purpose?</em></h1>
+    <div class="hdiv"></div>
+    <p class="hm">This is our attempt.<br><strong>This is how we do business at Kariwala.</strong></p>
+    <div class="hsn">Anil Kariwala</div>
+    <div class="hst">Founder &amp; Chairman</div>
+    <div class="hvl"><div class="hpi"><svg viewBox="0 0 24 24"><polygon points="8,5 20,12 8,19" fill="white"/></svg></div><div class="hvt"><span>A Message from Anil Kariwala</span><span>Watch video</span></div></div>
+  </div>
+
+  <!-- SPINE -->
+  <div class="spine fi">
+    <a href="#sahasrara" class="si"><div class="sic" style="background:var(--c7)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><div class="sl"><div class="sn">07</div><div class="sna">Sahasrara</div><div class="sw" style="color:var(--c7)">Purpose</div></div></a>
+    <a href="#ajna" class="si"><div class="sic" style="background:var(--c6)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg></div><div class="sl"><div class="sn">06</div><div class="sna">Ajna</div><div class="sw" style="color:var(--c6)">Vision</div></div></a>
+    <a href="#vishuddha" class="si"><div class="sic" style="background:var(--c5)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><div class="sl"><div class="sn">05</div><div class="sna">Vishuddha</div><div class="sw" style="color:var(--c5)">Truth</div></div></a>
+    <a href="#anahata" class="si"><div class="sic" style="background:var(--c4)"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="sl"><div class="sn">04</div><div class="sna">Anahata</div><div class="sw" style="color:var(--c4)">Connection</div></div></a>
+    <a href="#manipura" class="si"><div class="sic" style="background:var(--c3)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div><div class="sl"><div class="sn">03</div><div class="sna">Manipura</div><div class="sw" style="color:#c8a800">Leadership</div></div></a>
+    <a href="#swadhisthana" class="si"><div class="sic" style="background:var(--c2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/></svg></div><div class="sl"><div class="sn">02</div><div class="sna">Swadhisthana</div><div class="sw" style="color:var(--c2)">Creation</div></div></a>
+    <a href="#muladhara" class="si"><div class="sic" style="background:var(--c1)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/></svg></div><div class="sl"><div class="sn">01</div><div class="sna">Muladhara</div><div class="sw" style="color:var(--c1)">Foundation</div></div></a>
+  </div>
+
+  <!-- HERO PHOTO -->
+  <div class="hr fi">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=900&h=600&fit=crop" alt="Employee at Kariwala factory">
+    <div class="hro"><h4>Guided by Dharma,</h4><p>we strive to spread happiness through business with principles, people and purpose.</p></div>
+  </div>
+</div>
+<div class="sci"><p>Scroll to begin the journey</p><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#999" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></div>
+</section>
+
+<!-- STATS -->
+<div class="sb">
+<div class="sbi">
+  <div class="sti"><div class="num">1000+</div><div class="lab">People</div><div class="sub">Our greatest strength</div></div>
+  <div class="sti"><div class="num">40+</div><div class="lab">Countries</div><div class="sub">Global presence</div></div>
+  <div class="sti"><div class="num" style="font-size:1.1rem">Sustainable</div><div class="sub">By choice. Not by chance.</div></div>
+  <div class="sti"><div class="num" style="font-size:1.1rem">Quality</div><div class="sub">Built in every step.</div></div>
+  <div class="sti"><div class="num" style="font-size:1.1rem">Happiness</div><div class="sub">At the heart of everything.</div></div>
+</div>
+</div>
+
+<!-- THE JOURNEY -->
+<section class="sec jour" id="journey">
+<div class="con"><div class="ji fi">
+  <div class="ey">The Journey</div>
+  <h2 class="dl">Why I Believe Business<br>Can Be Different</h2>
+  <div class="jp"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop" alt="Anil Kariwala"></div>
+  <blockquote class="jq">&ldquo;The idea for this book began several years ago, when visitors to Kariwala Industries consistently commented on one remarkable aspect of our company: the palpable joy radiating from our employees.&rdquo;</blockquote>
+  <p class="jt">As an avid Yoga practitioner, I have long experienced the transformative power of its principles in my personal and professional life. Business Yoga is my attempt to share that journey, blending the ancient wisdom of Yoga with modern business practices.</p>
+  <p class="jt">It offers a holistic approach to leadership, team building, and organizational success. While many associate Yoga with physical postures, its philosophy runs much deeper — encompassing timeless principles of discipline, balance, clarity, and purpose.</p>
+  <p class="jt" style="text-align:center;font-style:italic;color:var(--gd)">Can the ancient wisdom of Yoga offer a path to balanced, conscious, and successful businesses?</p>
+  <div class="js">— Anil Kariwala</div>
+</div></div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="sec phil" id="philosophy">
+<div class="con">
+  <div class="pt fi"><div class="ey">Our Philosophy</div><h2 class="dm">Business Yoga</h2><p>Business, like a human being, has a body, mind, and consciousness. By addressing both material and emotional dimensions of success, businesses can thrive while nurturing well-being and purpose.</p></div>
+  <div class="pc fi"><blockquote>A picture is worth a thousand words.</blockquote><p>So we have deliberately chosen to tell our story through the people, places, products and moments that make Kariwala what it is. Look. Explore. Discover.</p></div>
+  <div class="pf fi"><div class="pfi"><h4>Dharma</h4><p>The foundation</p></div><div class="pfa">&darr;</div><div class="pfi"><h4>7 Chakras</h4><p>Why &amp; What</p></div><div class="pfa">&darr;</div><div class="pfi"><h4>8 Limbs</h4><p>How we practise</p></div><div class="pfa">&darr;</div><div class="pfi"><h4>Samadhi</h4><p>The outcome</p></div></div>
+</div>
+</section>
+
+<!-- 7 CHAKRAS OVERVIEW -->
+<section class="sec sc7" id="seven-chakras">
+<div class="con">
+  <div class="sc7h fi"><div class="ey">The Seven Chakras of Kariwala</div><h2 class="dl">Seven Dimensions That Keep<br>Our Business Balanced</h2><p>Just as each chakra regulates specific energies in the body, businesses thrive on the seamless flow of different energies — strategy, creativity, leadership, connection, truth, vision, and purpose.</p></div>
+  <div class="cg fi">
+    <a href="#sahasrara" class="cc"><div class="cd" style="background:var(--c7)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div><div class="ci"><div class="cn">07</div><h3>Sahasrara</h3><div class="cdim" style="color:var(--c7)">Purpose</div><div class="ctag">Why does it matter?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=240&fit=crop" alt="Purpose"></div></a>
+    <a href="#ajna" class="cc"><div class="cd" style="background:var(--c6)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg></div><div class="ci"><div class="cn">06</div><h3>Ajna</h3><div class="cdim" style="color:var(--c6)">Vision</div><div class="ctag">What do we see ahead?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=240&fit=crop" alt="Vision"></div></a>
+    <a href="#vishuddha" class="cc"><div class="cd" style="background:var(--c5)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><div class="ci"><div class="cn">05</div><h3>Vishuddha</h3><div class="cdim" style="color:var(--c5)">Truth</div><div class="ctag">What do we stand for?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=240&fit=crop" alt="Truth"></div></a>
+    <a href="#anahata" class="cc"><div class="cd" style="background:var(--c4)"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="ci"><div class="cn">04</div><h3>Anahata</h3><div class="cdim" style="color:var(--c4)">Connection</div><div class="ctag">Who are we connected to?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?w=400&h=240&fit=crop" alt="Connection"></div></a>
+    <a href="#manipura" class="cc"><div class="cd" style="background:var(--c3)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v6M12 17v6"/></svg></div><div class="ci"><div class="cn">03</div><h3>Manipura</h3><div class="cdim" style="color:#c8a800">Leadership</div><div class="ctag">Who is taking us forward?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=240&fit=crop" alt="Leadership"></div></a>
+    <a href="#swadhisthana" class="cc"><div class="cd" style="background:var(--c2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/></svg></div><div class="ci"><div class="cn">02</div><h3>Swadhisthana</h3><div class="cdim" style="color:var(--c2)">Creation</div><div class="ctag">What are we creating?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1558171814-3d0b1b7025b6?w=400&h=240&fit=crop" alt="Creation"></div></a>
+    <a href="#muladhara" class="cc"><div class="cd" style="background:var(--c1)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/></svg></div><div class="ci"><div class="cn">01</div><h3>Muladhara</h3><div class="cdim" style="color:var(--c1)">Foundation</div><div class="ctag">What keeps us standing?</div></div><div class="cimg"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=240&fit=crop" alt="Foundation"></div></a>
+  </div>
+</div>
+</section>
+
+<!-- MULADHARA -->
+<section class="chd" id="muladhara" style="background:var(--ivory)">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c1)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/></svg></div><div class="cn">01</div><h2 class="dm">Muladhara</h2><div style="color:var(--c1);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Foundation</div><div class="ctag">Everything that rises must first be rooted.</div><div class="cvq">What keeps us standing?</div></div>
+  <div class="gl"><p>See Our Foundation</p></div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=450&fit=crop" alt="Factory" loading="lazy"><div class="cap"><span class="cy">Kolkata</span>Where it all began.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=450&fit=crop" alt="Factory interior" loading="lazy"><div class="cap"><span class="cy">Factory Interior</span>The engine of creation.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=600&h=450&fit=crop" alt="Production" loading="lazy"><div class="cap"><span class="cy">Production</span>Quality is checked, not assumed.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=450&fit=crop" alt="Facility" loading="lazy"><div class="cap"><span class="cy">Modern Facility</span>Built to last.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=450&fit=crop" alt="Craftsmanship" loading="lazy"><div class="cap"><span class="cy">Craftsmanship</span>Every stitch matters.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1558171814-3d0b1b7025b6?w=600&h=450&fit=crop" alt="Materials" loading="lazy"><div class="cap"><span class="cy">Raw Materials</span>Every product begins here.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=450&fit=crop" alt="Team" loading="lazy"><div class="cap"><span class="cy">Our Team</span>Thirty years of trust.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?w=600&h=450&fit=crop" alt="Operations" loading="lazy"><div class="cap"><span class="cy">Operations</span>The backbone of Kariwala.</div></div>
+  </div>
+  <div class="ps fi"><h4>What These Pictures Tell Us</h4><p>A foundation is not built once. It is maintained every day.</p><p>The strongest structures are built on relationships, not concrete.</p><p>Forty years of consistency is a form of courage.</p></div>
+  <div class="nc2"><a href="#swadhisthana">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- SWADHISTHANA -->
+<section class="chd" id="swadhisthana">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c2)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><circle cx="12" cy="12" r="8"/><path d="M8 12c0-2.21 1.79-4 4-4s4 1.79 4 4"/></svg></div><div class="cn">02</div><h2 class="dm">Swadhisthana</h2><div style="color:var(--c2);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Creation</div><div class="ctag">The purpose of a business is not only to preserve. It is to create.</div><div class="cvq">What are we creating?</div></div>
+  <div class="gl"><p>From Idea to Object</p></div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1558171814-3d0b1b7025b6?w=600&h=450&fit=crop" alt="Design" loading="lazy"><div class="cap"><span class="cy">Design</span>An idea takes shape.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=450&fit=crop" alt="Craft" loading="lazy"><div class="cap"><span class="cy">Craftsmanship</span>Hands bring vision to life.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=450&fit=crop" alt="Production" loading="lazy"><div class="cap"><span class="cy">Production</span>Where craft meets scale.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=450&fit=crop" alt="Product" loading="lazy"><div class="cap"><span class="cy">Finished Product</span>Innovation, delivered.</div></div>
+  </div>
+  <div class="ps fi"><h4>What These Pictures Tell Us</h4><p>Creativity is not decoration. It is survival.</p><p>Every product carries the fingerprint of the person who made it.</p></div>
+  <div class="nc2"><a href="#manipura">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- MANIPURA -->
+<section class="chd" id="manipura" style="background:var(--warm)">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c3)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><circle cx="12" cy="12" r="5"/><path d="M12 1v6M12 17v6"/></svg></div><div class="cn">03</div><h2 class="dm">Manipura</h2><div style="color:#c8a800;font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Leadership</div><div class="ctag">Vision means little without the courage to act.</div><div class="cvq">Who is taking us forward?</div></div>
+  <div class="gl"><p>Leadership in Action</p></div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=450&fit=crop" alt="Leadership" loading="lazy"><div class="cap"><span class="cy">Leadership</span>Listening before deciding.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=450&fit=crop" alt="Team" loading="lazy"><div class="cap"><span class="cy">Recognition</span>Every achievement matters.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=450&fit=crop" alt="Award" loading="lazy"><div class="cap"><span class="cy">Direction</span>Strength takes many forms.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=450&fit=crop" alt="Strategy" loading="lazy"><div class="cap"><span class="cy">Strategy</span>Direction, not control.</div></div>
+  </div>
+  <div class="nc2"><a href="#anahata">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- ANAHATA -->
+<section class="chd" id="anahata">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c4)"><svg viewBox="0 0 24 24" fill="#fff" width="32" height="32"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div><div class="cn">04</div><h2 class="dm">Anahata</h2><div style="color:var(--c4);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Connection</div><div class="ctag">A business is made of relationships.</div><div class="cvq">Who are we connected to?</div></div>
+  <div class="gl"><p>People Who Have Shared Our Journey</p></div>
+  <div class="gsl">Our People</div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?w=600&h=450&fit=crop" alt="People" loading="lazy"><div class="cap"><span class="cy">Empowerment</span>Strength in every hand.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=450&fit=crop" alt="Team" loading="lazy"><div class="cap"><span class="cy">Together</span>Joy is contagious.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=450&fit=crop" alt="Community" loading="lazy"><div class="cap"><span class="cy">Growth</span>Every person matters.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=450&fit=crop" alt="Vision" loading="lazy"><div class="cap"><span class="cy">Connection</span>The energy of Kariwala.</div></div>
+  </div>
+  <div class="gsl">Community</div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=450&fit=crop" alt="Healthcare" loading="lazy"><div class="cap"><span class="cy">Healthcare</span>Caring for our community.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600&h=450&fit=crop" alt="Eye care" loading="lazy"><div class="cap"><span class="cy">Eye Care Camps</span>Giving back, always.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=450&fit=crop" alt="Medical" loading="lazy"><div class="cap"><span class="cy">Medical Camps</span>Health for all.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=450&fit=crop" alt="Community" loading="lazy"><div class="cap"><span class="cy">Community</span>Happiness shared is multiplied.</div></div>
+  </div>
+  <div class="ps fi"><h4>What These Pictures Tell Us</h4><p>A relationship is not a transaction. It is a commitment.</p><p>The strongest bonds are forged in trust, not contracts.</p></div>
+  <div class="nc2"><a href="#vishuddha">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- VISHUDDHA -->
+<section class="chd" id="vishuddha" style="background:var(--warm)">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c5)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg></div><div class="cn">05</div><h2 class="dm">Vishuddha</h2><div style="color:var(--c5);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Truth</div><div class="ctag">What we say matters. What we do matters more.</div><div class="cvq">What do we stand for?</div></div>
+  <div class="gl"><p>What We Say. What We Do.</p></div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=450&fit=crop" alt="Standards" loading="lazy"><div class="cap"><span class="cy">Standards</span>Promise kept.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=450&fit=crop" alt="Award" loading="lazy"><div class="cap"><span class="cy">Recognition</span>Proof, not claims.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=450&fit=crop" alt="Certification" loading="lazy"><div class="cap"><span class="cy">Certification</span>Transparency in action.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=450&fit=crop" alt="Quality" loading="lazy"><div class="cap"><span class="cy">Quality</span>What we do matters more.</div></div>
+  </div>
+  <div class="nc2"><a href="#ajna">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- AJNA -->
+<section class="chd" id="ajna">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c6)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg></div><div class="cn">06</div><h2 class="dm">Ajna</h2><div style="color:var(--c6);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Vision</div><div class="ctag">Seeing what is coming is part of the job.</div><div class="cvq">What do we see ahead?</div></div>
+  <div class="gl"><p>Looking Ahead</p></div>
+  <div class="pg fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=450&fit=crop" alt="Future" loading="lazy"><div class="cap"><span class="cy">Innovation</span>The future, today.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=450&fit=crop" alt="Philosophy" loading="lazy"><div class="cap"><span class="cy">Philosophy</span>Purpose guides us forward.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=600&h=450&fit=crop" alt="Pillars" loading="lazy"><div class="cap"><span class="cy">Pillars</span>Building a better path.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&h=450&fit=crop" alt="Growth" loading="lazy"><div class="cap"><span class="cy">Growth</span>40 countries. And counting.</div></div>
+  </div>
+  <div class="nc2"><a href="#sahasrara">Explore the next chakra &rarr;</a></div>
+</div>
+</section>
+
+<!-- SAHASRARA -->
+<section class="chd" id="sahasrara" style="background:var(--warm)">
+<div class="con">
+  <div class="chdh fi"><div class="chb" style="background:var(--c7)"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" width="32" height="32"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><div class="cn">07</div><h2 class="dm">Sahasrara</h2><div style="color:var(--c7);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.85rem;margin:6px 0 12px">Purpose</div><div class="ctag">A business can ask a bigger question.</div><div class="cvq">Why does it matter?</div></div>
+  <div class="gl"><p>Why We Do All This</p></div>
+  <div class="pg sm fi">
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=450&fit=crop" alt="Community" loading="lazy"><div class="cap"><span class="cy">Community</span>Beyond profit.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=600&h=450&fit=crop" alt="Giving back" loading="lazy"><div class="cap"><span class="cy">Giving Back</span>More than we take.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=450&fit=crop" alt="Hope" loading="lazy"><div class="cap"><span class="cy">Sustainability</span>For generations to come.</div></div>
+    <div class="pt2" onclick="openLb(this)"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=450&fit=crop" alt="Happiness" loading="lazy"><div class="cap"><span class="cy">Happiness</span>The reason we begin again.</div></div>
+  </div>
+  <div class="ps fi"><p style="font-size:1.15rem;font-weight:400;color:var(--gd);margin-top:16px">To spread happiness through business with principles, people and purpose.</p></div>
+  <div class="nc2"><a href="#eight-limbs">Discover the Eight Limbs &rarr;</a></div>
+</div>
+</section>
+
+<!-- 8 LIMBS -->
+<section class="sec el" id="eight-limbs">
+<div class="con">
+  <div class="elh fi"><div class="ey">The Eight Limbs of Business Yoga</div><h2 class="dl">The Practice of<br>Conscious Action</h2></div>
+  <div class="elc fi"><p><strong>The Chakras tell us what must be in balance.</strong></p><p style="margin-top:10px"><strong>The Eight Limbs show us how we practise that balance.</strong></p></div>
+  <div class="lp fi">
+    <div class="li act" onclick="shl(this,'yama')"><div class="ln">01</div><div class="lna">Yama</div><div class="lm">Principles</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'niyama')"><div class="ln">02</div><div class="lna">Niyama</div><div class="lm">Discipline</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'asana')"><div class="ln">03</div><div class="lna">Asana</div><div class="lm">Posture</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'pranayama')"><div class="ln">04</div><div class="lna">Pranayama</div><div class="lm">Life Force</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'pratyahara')"><div class="ln">05</div><div class="lna">Pratyahara</div><div class="lm">Letting Go</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'dharana')"><div class="ln">06</div><div class="lna">Dharana</div><div class="lm">Focus</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'dhyana')"><div class="ln">07</div><div class="lna">Dhyana</div><div class="lm">Meditation</div></div><div class="lco"></div>
+    <div class="li" onclick="shl(this,'sam8')"><div class="ln">08</div><div class="lna">Samadhi</div><div class="lm">Pinnacle</div></div>
+  </div>
+  <div id="lds">
+    <div class="ld act" id="ld-yama"><h3>Yama — The Principles</h3><p>The ethical foundation of how we conduct business. Truthfulness, non-harm, non-stealing, moderation, and non-attachment form the moral compass that guides every decision at Kariwala.</p></div>
+    <div class="ld" id="ld-niyama"><h3>Niyama — The Discipline</h3><p>Internal practices of purity, contentment, austerity, self-study, and surrender. In business, this translates to maintaining clean processes, honest growth, and continuously learning.</p></div>
+    <div class="ld" id="ld-asana"><h3>Asana — The Posture</h3><p>Stability and comfort in our physical workspace and operations. The right structure, environment, and systems that allow our people to do their best work.</p></div>
+    <div class="ld" id="ld-pranayama"><h3>Pranayama — Life Force</h3><p>The conscious management of energy — resources, cash flow, time, and attention. Breathing life into the organization with intention rather than compulsion.</p></div>
+    <div class="ld" id="ld-pratyahara"><h3>Pratyahara — Letting Go</h3><p>Withdrawing from distractions. Focusing on what truly matters, saying no to what doesn't serve our purpose, and not chasing every trend.</p></div>
+    <div class="ld" id="ld-dharana"><h3>Dharana — Concentration</h3><p>Single-pointed focus on our core mission. When an organization can concentrate its energy, extraordinary things become possible.</p></div>
+    <div class="ld" id="ld-dhyana"><h3>Dhyana — Meditation</h3><p>Deep, sustained reflection on our purpose and direction. Strategic thinking that goes beyond quarterly numbers to ask the deeper questions.</p></div>
+    <div class="ld" id="ld-sam8"><h3>Samadhi — The Pinnacle</h3><p>When purpose and action become one. A state where the business operates in flow — balanced, conscious, and fulfilling its highest potential.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- SAMADHI -->
+<section class="sec sam" id="samadhi">
+<div class="con"><div class="sami fi">
+  <div class="ey">The Outcome</div>
+  <div class="samico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="#fff" stroke-width="1.2" fill="none"/></svg></div>
+  <h2 class="dl">Samadhi</h2>
+  <div class="samtag">When purpose and action become one.</div>
+  <p>Samadhi is not a destination. It is a state of being where the business operates in harmony — balanced between growth and responsibility, between ambition and purpose, between profit and people.</p>
+  <p style="font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--gd);margin-top:28px">To spread happiness through business with principles, people and purpose.</p>
+</div></div>
+</section>
+
+<!-- OUR BUSINESS -->
+<section class="sec ob" id="our-business">
+<div class="con">
+  <div class="obh fi"><div class="ey">Our Business</div><h2 class="dl">What We Make.<br>How We Make It.<br>Why We Make It.</h2><p>For over three decades, Kariwala Industries has led in ethical, sustainable manufacturing — producing custom bags and garments with skilled craftsmanship and modern technology.</p></div>
+  <div class="bg fi">
+    <div class="bc"><div class="bci"><img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600&h=400&fit=crop" alt="Bags" loading="lazy"></div><div class="bct"><h3>Sustainable Bags</h3><p>Custom-designed jute, cotton, and sustainable bags tailored to branding and functional needs.</p></div></div>
+    <div class="bc"><div class="bci"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" alt="Garments" loading="lazy"></div><div class="bct"><h3>Precision Garments</h3><p>From industrial workwear to uniforms and fashion, crafted with durability and quality.</p></div></div>
+    <div class="bc"><div class="bci"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&h=400&fit=crop" alt="Approach" loading="lazy"></div><div class="bct"><h3>Our Approach</h3><p>Design, sampling, production, quality control — ethical practices at every step.</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- OUR PEOPLE -->
+<section class="sec op" id="our-people">
+<div class="con">
+  <div class="oph fi"><div class="ey">Our People</div><h2 class="dl">The Energy of Kariwala</h2><p>1000+ people across our facilities. 70% women. Their joy, commitment, and craftsmanship are what make Kariwala what it is.</p></div>
+  <div class="opg fi">
+    <div class="opt"><img src="https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?w=400&h=400&fit=crop" alt="Team" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=400&h=400&fit=crop" alt="Team" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=400&fit=crop" alt="Team" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop" alt="Team" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=400&fit=crop" alt="Craft" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=400&fit=crop" alt="Awards" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=400&fit=crop" alt="Team" loading="lazy"></div>
+    <div class="opt"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=400&fit=crop" alt="Community" loading="lazy"></div>
+  </div>
+</div>
+</section>
+
+<!-- WORK WITH US -->
+<section class="wwu" id="wwu">
+<div class="con">
+  <div class="ey" style="color:var(--gm);margin-bottom:14px">Join the Journey</div>
+  <h2 class="dl" style="color:#fff">Work With Us</h2>
+  <p>Whether you're a customer seeking a sustainable partner, a talent looking for purposeful work, or a partner who shares our values.</p>
+  <div class="wwub"><a href="#contact" class="bp">Get in Touch</a><a href="#" class="bs">View Careers</a><a href="#" class="bs">Partner With Us</a></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec ct" id="contact">
+<div class="con"><div class="cti fi">
+  <div class="ey">Contact</div>
+  <h2 class="dm" style="margin-bottom:20px">Let's Begin a Conversation</h2>
+  <p>We believe every great partnership begins with a conversation.</p>
+  <a href="mailto:info@kariwala.com" style="font-size:1.05rem;color:var(--g);font-weight:500;display:block;margin-bottom:14px">info@kariwala.com</a>
+  <p style="font-size:.88rem;color:var(--tl)">Kariwala Towers, J1-5, Block EP, Salt Lake, Sector V<br>Kolkata, West Bengal 700091, India</p>
+</div></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft">
+<div class="fti">
+  <div class="ftb"><div class="nln">Kariwala</div><div class="nls" style="color:rgba(255,255,255,.35)">Business, Consciously Conducted</div><p>Guided by Dharma, we strive to spread happiness through business with principles, people and purpose.</p></div>
+  <div class="ftc"><h4>Explore</h4><a href="#journey">The Journey</a><a href="#seven-chakras">Seven Chakras</a><a href="#eight-limbs">Eight Limbs</a><a href="#samadhi">Samadhi</a></div>
+  <div class="ftc"><h4>Company</h4><a href="#our-business">Our Business</a><a href="#our-people">Our People</a><a href="#contact">Contact</a><a href="#">Careers</a></div>
+  <div class="ftc"><h4>Connect</h4><a href="https://www.linkedin.com/company/kariwala-industries-limited/" target="_blank">LinkedIn</a><a href="https://www.instagram.com/kariwala_industries_ltd/" target="_blank">Instagram</a><a href="https://www.facebook.com/KariwalaIndustriesLtd/" target="_blank">Facebook</a></div>
+</div>
+<div class="ftbt"><span>&copy; 2026 Kariwala Industries Ltd</span><span>Kolkata, India</span></div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLb()">
+<button class="lbx" onclick="closeLb()">&times;</button>
+<img id="lbi" src="" alt="">
+<div class="lbc" id="lbcap"></div>
+</div>
+
+<script>
+// Mobile menu
+document.getElementById('ham').onclick=()=>document.getElementById('mm').classList.add('open');
+document.getElementById('mmx').onclick=()=>document.getElementById('mm').classList.remove('open');
+function cmm(){document.getElementById('mm').classList.remove('open')}
+
+// Scroll effects
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>80)});
+
+// 8 Limbs
+function shl(el,id){
+  document.querySelectorAll('.ld').forEach(d=>d.classList.remove('act'));
+  document.querySelectorAll('.li').forEach(l=>l.classList.remove('act'));
+  const d=document.getElementById('ld-'+id);if(d)d.classList.add('act');
+  el.classList.add('act');
+}
+
+// Lightbox
+function openLb(tile){
+  const img=tile.querySelector('img');
+  const cap=tile.querySelector('.cap');
+  document.getElementById('lbi').src=img.src.replace(/width=\d+/,'width=1200').replace(/height=\d+/,'height=900');
+  document.getElementById('lbcap').innerHTML=cap?cap.innerHTML:'';
+  document.getElementById('lb').classList.add('show');
+  document.body.style.overflow='hidden';
+}
+function closeLb(){document.getElementById('lb').classList.remove('show');document.body.style.overflow=''}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){const t=document.querySelector(this.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+</script>
+</body>
+</html>
